@@ -1,0 +1,82 @@
+*{
+    margin: 0;padding: 0;font-family: sans-serif;
+}
+main{
+    margin: 40px;
+}
+div{
+    width: 50px;
+    height: 50px;
+    background-color: #d3d3d3;
+}
+/*GRADIENTES*/
+.gradientelineal{
+    background-image: linear-gradient(70deg, orange, darkviolet);
+}
+.gradienteradial{
+    background-image: radial-gradient(aquamarine, blue);
+}
+/*TRANSICIONES*/
+.transicion{
+    transition: all 2s ;
+}
+.transicion:hover{
+    width: 220px;
+    height: 220px;background-image: linear-gradient(orange, violet);
+
+    border: solid 10px orange;
+}
+
+/*TRANSFORMACIONES*/
+.mover{
+    transform: translateX(500px);
+}
+.girar{
+    transform: rotate(145deg);
+}
+.escalar{
+    transform: scale(2,0.5);
+}
+.torcer{
+    transform: skew(20deg,10deg);
+}
+
+
+
+
+/*ANIMACIONES*/
+.animacion{
+    animation-name: animame;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+}
+.tituloanimado{
+    animation-name: titulo;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+}
+@keyframes titulo{
+    0%/*inicio*/{
+        transform: translate(-200px);
+    }
+    100%/*final*/{
+        transform: translate(0);
+    }
+}
+
+@keyframes animame{
+    0%{
+        width: 100px;
+    }
+    25%{
+        width: 300px;
+    }
+    50%{
+        width: 200px;
+        background-color: #000;
+    }
+    75%{
+        background-color: red;
+    }
+}
